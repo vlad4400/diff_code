@@ -1,0 +1,24 @@
+var
+  c :array [1..40] of integer;
+  i, index :byte;
+  cht, nocht: integer;
+
+begin
+  clrscr;
+  
+  index := 1;
+  for i := 1 to 40 do
+    begin
+      c[i] := random(41) + 10;
+      if c[i] mod 2 = 0 then
+        cht := cht + c[i]
+        else nocht := nocht + c[i];
+        if c[index] < c[i] then
+	  index := i;
+    end;
+
+  writeln('Chotnie: ', cht);
+  writeln('Ne chotnue: ', nocht);
+  writeln('Max: ',c[index],'with index: ',index);
+
+end.

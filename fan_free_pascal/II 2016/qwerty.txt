@@ -1,0 +1,12 @@
+mas1, mas2
+
+j := 1
+
+for i = 1 to 70 do
+  begin
+    if abs(mas1) <= 7 then
+      begin
+        mas2[j] := mas1[i];
+        j := j + 1; 
+      end;
+  end;
