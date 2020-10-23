@@ -1,0 +1,104 @@
+object Form2: TForm2
+  Left = 220
+  Top = 245
+  Width = 360
+  Height = 173
+  Caption = 'Form2'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object BitBtn1: TBitBtn
+    Left = 24
+    Top = 24
+    Width = 75
+    Height = 25
+    Caption = 'Custom'
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 96
+    Top = 24
+    Width = 75
+    Height = 25
+    TabOrder = 1
+    Kind = bkAbort
+  end
+  object BitBtn3: TBitBtn
+    Left = 168
+    Top = 24
+    Width = 75
+    Height = 25
+    TabOrder = 2
+    Kind = bkAll
+  end
+  object BitBtn4: TBitBtn
+    Left = 240
+    Top = 24
+    Width = 75
+    Height = 25
+    TabOrder = 3
+    Kind = bkCancel
+  end
+  object BitBtn5: TBitBtn
+    Left = 24
+    Top = 48
+    Width = 75
+    Height = 25
+    TabOrder = 4
+    Kind = bkClose
+  end
+  object BitBtn6: TBitBtn
+    Left = 96
+    Top = 48
+    Width = 75
+    Height = 25
+    TabOrder = 5
+    Kind = bkHelp
+  end
+  object BitBtn7: TBitBtn
+    Left = 168
+    Top = 48
+    Width = 75
+    Height = 25
+    TabOrder = 6
+    Kind = bkIgnore
+  end
+  object BitBtn8: TBitBtn
+    Left = 240
+    Top = 48
+    Width = 75
+    Height = 25
+    TabOrder = 7
+    Kind = bkNo
+  end
+  object BitBtn9: TBitBtn
+    Left = 128
+    Top = 72
+    Width = 75
+    Height = 25
+    TabOrder = 8
+    Kind = bkOK
+  end
+  object BitBtn10: TBitBtn
+    Left = 56
+    Top = 72
+    Width = 75
+    Height = 25
+    TabOrder = 9
+    Kind = bkRetry
+  end
+  object BitBtn11: TBitBtn
+    Left = 200
+    Top = 72
+    Width = 75
+    Height = 25
+    TabOrder = 10
+    Kind = bkYes
+  end
+end

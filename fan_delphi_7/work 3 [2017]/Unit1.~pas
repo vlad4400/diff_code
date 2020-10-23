@@ -1,0 +1,55 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    EdValueBB: TEdit;
+    BShowBBList: TButton;
+    BExit: TButton;
+    procedure BExitClick(Sender: TObject);
+    procedure BShowBBListClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses Unit2;
+
+{$R *.dfm}
+
+procedure TForm1.BExitClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TForm1.BShowBBListClick(Sender: TObject);
+var
+  res :TModalResult;
+begin
+  Form2.ShowModal;
+  EdValueBB.Text:= iNTTOSTR(form2.modalresult);
+  {case res of
+    mrOk: EdValueBB.Text := '1';
+    mrCancel: EdValueBB.Text := '2';
+    mrAbort: EdValueBB.text := '3';
+    mrRetry: EdValueBB.Text := '4';
+    mrIgnore: EdValueBB.Text := '5';
+    mrYes: EdValueBB.Text := '6';
+    mrNo: EdValueBB.Text := '7';
+    mrAll: EdValueBB.Text := '8';
+  end;  }
+
+end;
+
+end.
