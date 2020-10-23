@@ -1,0 +1,23 @@
+program grivna;
+var
+  n:integer;
+  label A;
+begin
+  write('Ââåä³òü ÷èñëî:');
+  read(n);
+  writeln;
+  write('Âè îáğàëè ');
+  if (n>=11) and (n<=14)
+    then begin
+     write(n,' ãğèâåíü!');
+     goto A;
+     end
+   else 
+    n:=n mod 10;
+    case n of
+      0,5..9:write(n,' ãğèâåíü!');
+      1:write(n,' ãğèâíş!');
+      2..4:write(n,' ãğèâí³!');
+     end;
+   A:
+end.

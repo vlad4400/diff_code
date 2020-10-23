@@ -1,0 +1,73 @@
+uses GraphABC;
+var x,y,z,p:integer;
+label A;
+begin
+  circle(300,90,45);
+  line(300,135,300,280);
+  rectangle(285,115,315,105);
+  circle(285,80,5);
+  circle(315,80,5);
+  line(300,280,250,400);
+  line(300,280,350,400);
+  line(300,145,270,200);
+  line(300,145,330,200);
+  //line(270,200,245,250);
+  line(330,200,355,250);
+  x:=245; 
+  y:=250;
+  z:=4;
+  p:=19;
+  //setbrushcolor(clwhite);
+  A:
+  while x>230 do
+  begin
+    line(270,200,x,y,clblack);
+    //line(270,200,x,y,clwhite);
+    x:=x-1;
+    y:=y-1;
+    
+    circle(315,80,z);
+    z:=z+1;
+    circle(285,80,p);
+    p:=p-1;
+    
+    sleep(100);
+    setpencolor(clwhite);
+    circle(240,250,55);
+    setpencolor(clblack);
+    
+    setpencolor(clwhite);
+    circle(315,80,20);
+    setpencolor(clblack);
+    
+    setpencolor(clwhite);
+    circle(285,80,20);
+    setpencolor(clblack);
+  end;
+  while x<245 do
+  begin
+    line(270,200,x,y,clblack);
+    //line(270,200,x,y,clwhite);
+    x:=x+1;
+    y:=y+1;
+    
+    circle(315,80,z);
+    z:=z-1;
+    circle(285,80,p);
+    p:=p+1;
+    
+    sleep(100);
+    setpencolor(clwhite);
+    circle(240,250,55);
+    setpencolor(clblack);
+    
+    setpencolor(clwhite);
+    circle(315,80,20);
+    setpencolor(clblack);
+    
+    setpencolor(clwhite);
+    circle(285,80,20);
+    setpencolor(clblack);
+    end;
+  goto A;
+end.
