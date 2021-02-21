@@ -1,0 +1,43 @@
+[2021-02-21T16:14:12.746] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:12.758] [TRACE] gameLogs - Dealer: 9. Player: Q, Q.
+[2021-02-21T16:14:14.223] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:14.223] [TRACE] gameLogs - Dealer: 9, A. Player: Q, Q.
+[2021-02-21T16:14:14.223] [TRACE] gameLogs - #Standoff#
+[2021-02-21T16:14:14.223] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:16.083] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:16.091] [TRACE] gameLogs - Dealer: A. Player: J, 10.
+[2021-02-21T16:14:17.115] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:17.115] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:17.115] [TRACE] gameLogs - Dealer: A, A, 7. Player: J, 10.
+[2021-02-21T16:14:17.124] [TRACE] gameLogs - #User won#
+[2021-02-21T16:14:17.124] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:18.915] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:18.918] [TRACE] gameLogs - Dealer: 6. Player: K, J.
+[2021-02-21T16:14:19.647] [TRACE] gameLogs - User takes card
+[2021-02-21T16:14:19.647] [TRACE] gameLogs - Dealer: 6. Player: K, J, K.
+[2021-02-21T16:14:19.655] [TRACE] gameLogs - #User lost#
+[2021-02-21T16:14:19.655] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:22.520] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:22.520] [TRACE] gameLogs - Dealer: 10. Player: 10, 10.
+[2021-02-21T16:14:22.994] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:22.994] [TRACE] gameLogs - Dealer: 10, 10. Player: 10, 10.
+[2021-02-21T16:14:23.002] [TRACE] gameLogs - #Standoff#
+[2021-02-21T16:14:23.002] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:25.787] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:25.797] [TRACE] gameLogs - Dealer: Q. Player: 6, 6.
+[2021-02-21T16:14:30.870] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:30.870] [TRACE] gameLogs - Dealer: Q, Q. Player: 6, 6.
+[2021-02-21T16:14:30.875] [TRACE] gameLogs - #User lost#
+[2021-02-21T16:14:30.875] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:34.013] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:34.022] [TRACE] gameLogs - Dealer: K. Player: Q, 6.
+[2021-02-21T16:14:35.272] [TRACE] gameLogs - User takes card
+[2021-02-21T16:14:35.272] [TRACE] gameLogs - Dealer: K. Player: Q, 6, 7.
+[2021-02-21T16:14:35.280] [TRACE] gameLogs - #User lost#
+[2021-02-21T16:14:35.280] [TRACE] gameLogs - #Game over#
+[2021-02-21T16:14:38.266] [TRACE] gameLogs - #Begin game#
+[2021-02-21T16:14:38.266] [TRACE] gameLogs - Dealer: 9. Player: J, Q.
+[2021-02-21T16:14:38.809] [TRACE] gameLogs - Diller takes card
+[2021-02-21T16:14:38.809] [TRACE] gameLogs - Dealer: 9, 9. Player: J, Q.
+[2021-02-21T16:14:38.816] [TRACE] gameLogs - #User won#
+[2021-02-21T16:14:38.816] [TRACE] gameLogs - #Game over#
