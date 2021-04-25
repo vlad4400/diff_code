@@ -1,0 +1,15 @@
+<form method="POST" action="http://localhost:3000/auth/signup/">
+    <label>
+        User name
+        <input type="text" name="username" required="required" placholder="Enter your name" value="{{ username }}">
+    </label><br>
+    <label>
+        Your e-mail
+        <input type="email" name="email" required="required" placeholder="Enter your e-mail">
+    </label><br>
+    <label>
+        Password
+        <input type="password" name="password" required="required" placeholder="Enter your password">
+    </label><br>
+    <button type="submit">Sign up</button>
+</form>

@@ -1,0 +1,13 @@
+<html>
+    <head>
+        {{ title }}
+    </head>
+    <body>
+        <h1>
+            {{#if isAuth}}
+                {{ message }}
+            {{/if}}
+        </h1>
+        <a href="/task">Task list</a>
+    </body>
+</html>
