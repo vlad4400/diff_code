@@ -1,0 +1,62 @@
+<html>
+
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script>
+
+<head>
+    <title>Socket App</title>
+</head>
+<body>
+    <h5 style="color: green">Loading..</h5>
+</body>
+<script type="text/javascript">
+    const PORT = 3030;
+
+    const socket = io(`localhost:${PORT}`);
+
+    const addMessage = (msg) => {
+        const msgSpan = document.createElement('span').innerHTML = msg;
+        document.getElementById('messages').append(msgSpan);
+        document.getElementById('messages').append(document.createElement('br'));
+    };
+
+    socket.on('connect', function (data) {
+        document.getElementsByTagName('body')[0].innerHTML =
+            `<p5 style="color: green">Connected. Waiting ID..</p5>`;
+    });
+
+    socket.on('SET_USERID', function (userID) {
+        window.history.pushState("", "", `http://localhost:${PORT}/?id=${userID}`);
+
+        document.getElementsByTagName('body')[0].innerHTML =
+            `<p style="color: blue">ID ${userID}</p>
+            <input type="text" id="input" autofocus>
+            <input type="submit" id="send" value="Send">
+            <div id="messages"></div>`;
+
+        let input = document.getElementById('input');
+        document.getElementById('send').addEventListener('click', () => {
+            socket.emit('CLIENT_MSG', { msg: input.value });
+            input.value = '';
+        });
+        input.addEventListener('keydown', (e) => {
+            if (e.key == 'Enter') {
+                socket.emit('CLIENT_MSG', { msg: input.value });
+                input.value = '';
+                event.preventDefault();
+            }
+        });
+    });
+
+    socket.on('SERVER_ERROR', function (data) {
+        document.getElementsByTagName('body')[0].innerHTML = '<h5 style="color: red">Server error</h5>';
+    });
+
+    socket.on('SERVER_MSG', function (data) {
+        addMessage(data.msg);
+    });
+
+    socket.on('NEW_CONN_EVENT', function (data) {
+        addMessage(data.msg);
+    });
+</script>
+</html>
