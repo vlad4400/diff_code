@@ -1,0 +1,25 @@
+{
+  "name": "browser-file-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "bin": {
+    "browser-file-manager": "index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "parse": "^3.2.0",
+    "socket.io": "^4.1.1",
+    "socket.io-stream": "^0.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

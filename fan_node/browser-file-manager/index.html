@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="https://cdn.socket.io/3.1.1/socket.io.min.js" integrity="sha384-gDaozqUvc4HTgo8iZjwth73C6dDDeOJsAgpxBcMpZYztUfjHXpzrpdrHRdVp8ySO" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io-stream/0.9.1/socket.io-stream.min.js" integrity="sha512-LTN7WQKvmCiOWbwxE4XRu3NCRqLzkFo28vBDHVhAyKjhmorNGjtvFxQgbvAttO31Ij6An4AIXU4GVaYOC0eNpQ==" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser file manager</title>
+    <style>
+        li {
+            cursor: pointer;
+            list-style: none;
+        }
+        li:hover {
+            color: blue;
+        }
+        li:active {
+            cursor: wait;
+        }
+        .counter {
+            color: firebrick;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <p class="counter" id="counter"></p>
+        <div class="content" id="content"></div>
+    </div>
+
+    <script type="text/javascript">
+        const PORT = 3040;
+
+        const getMenu = (queryPath) => {
+            console.log(queryPath);
+            socket.emit('GET_MENU', { queryPath });
+        };
+
+        const socket = io(`localhost:${PORT}`);
+
+        socket.on('NEW_QUANTITY_USERS', n => {
+            document.getElementById('counter').innerText = `users: ${n}`;
+        });
+
+        socket.on('connect', () => {
+            console.log('connected');
+        });
+
+        socket.on('SET_MENU', ({ menu }) => {
+            document.getElementById('content').innerHTML += menu;
+        });
+
+        ss(socket).on('FILE', stream => {
+            let binaryString = "";
+
+            stream.on('data', data => {
+                let s = '';
+                for(var i = 0; i < data.length; i++) {
+                    s += String.fromCharCode(data[i]);
+                }
+                let p = document.createElement('p');
+                p.innerText = s;
+                document.getElementById('content').append(p);            
+            });
+        });
+
+        socket.on('INIT', ({ menu }) => {
+            document.getElementById('content').innerHTML = menu;
+        });
+    </script>
+</body>
+</html>
